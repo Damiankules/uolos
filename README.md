@@ -24,16 +24,12 @@ npm run typecheck
 Nowy projekt = nowy obiekt w `projects.ts` + zdjęcia w `public/images/projects/`. Strona `/projektai/<slug>/` powstaje automatycznie.
 Wizualizacje mają `kind: "vizualizacija"` i są wyraźnie oddzielone od zrealizowanych projektów.
 
-## Formularz (Netlify Forms)
+## Formularz (FormSubmit)
 
-Formularz `uzklausa` jest wykrywany przez Netlify z pliku `public/contact-form.html`.
-Komponent `src/components/ui/ContactForm.tsx` wysyła te same pola (z załącznikiem) przez `fetch`.
+Formularz (`src/components/ui/ContactForm.tsx`) wysyła zapytania przez **FormSubmit** na adres z `src/data/site.ts` (`email`), razem z załącznikiem (do 5 MB).
+Po wysłaniu wraca na tę samą stronę z `?issiusta=1` i pokazuje podziękowanie.
 
-Po pierwszym wdrożeniu w panelu Netlify:
-1. **Forms → Enable form detection** (jeśli wyłączone), potem ponowne wdrożenie.
-2. **Forms → Form notifications → Email notification** → `komfortas@me.com`.
-
-Pola w obu plikach muszą mieć te same nazwy.
+Przy **pierwszym** wysłaniu FormSubmit wyśle na ten adres e-mail z przyciskiem **„Activate Form”** — trzeba go raz kliknąć.
 
 ## Wdrożenie
 
