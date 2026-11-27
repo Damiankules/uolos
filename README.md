@@ -41,3 +41,9 @@ Pola w obu plikach muszą mieć te same nazwy.
 - **Ręcznie**: `npm run build` i przeciągnij folder `out/` w **Deploys → Drag and drop**.
 
 Zmienna `NEXT_PUBLIC_SITE_URL` (domyślnie `https://uolos.lt`) — patrz `.env.example`.
+
+### Autor commitów
+
+Netlify (darmowy plan, prywatne repo) buduje tylko commity od członków zespołu Netlify.
+Commity muszą być podpisane kontem GitHub **Damiankules** — inaczej deploy kończy się błędem
+„Unrecognized Git contributor”.
