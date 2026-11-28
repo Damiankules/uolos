@@ -14,6 +14,9 @@ export const site = {
   instagram: "https://www.instagram.com/uolos.lt/",
   instagramHandle: "@uolos.lt",
   ogImage: "/images/og.jpg",
+  /** Legal owner (data controller) — individual activity, certificate no. */
+  owner: "Aleksandr Smirnov",
+  ivp: "984953",
 } as const;
 
 export const nav: NavItem[] = [

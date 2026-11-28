@@ -20,6 +20,7 @@ const contacts = [
   `- El. paštas: ${site.email}`,
   `- Instagram: ${site.instagram}`,
   `- Užklausos forma: ${abs("/kontaktai/")}`,
+  `- Savininkas: ${site.owner}, individualios veiklos pažyma Nr. ${site.ivp}`,
 ];
 
 export function llmsTxt(): string {

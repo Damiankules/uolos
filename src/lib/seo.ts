@@ -41,5 +41,6 @@ export function businessJsonLd() {
     email: site.email,
     image: site.url + site.ogImage,
     sameAs: [site.instagram],
+    founder: { "@type": "Person", name: site.owner },
   };
 }

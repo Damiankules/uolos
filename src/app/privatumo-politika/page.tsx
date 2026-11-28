@@ -7,8 +7,6 @@ export const metadata = buildMetadata({
   path: "/privatumo-politika/",
 });
 
-// NOTE: generic template — the client should add the legal entity name /
-// company code and confirm the retention period before launch.
 export default function PrivacyPage() {
   return (
     <section className="pt-[clamp(64px,10vw,120px)] pb-[clamp(88px,12vw,150px)]">
@@ -16,7 +14,13 @@ export default function PrivacyPage() {
         <p className="eyebrow">Dokumentai</p>
         <h1 className="h1 mb-10">Privatumo politika</h1>
         <div className="prose">
-          <p>Ši privatumo politika paaiškina, kaip {site.name} (toliau — „mes“) tvarko asmens duomenis, kuriuos pateikiate naudodamiesi svetaine {site.url.replace(/^https?:\/\//, "")}.</p>
+          <p>Ši privatumo politika paaiškina, kaip tvarkomi asmens duomenys, kuriuos pateikiate naudodamiesi svetaine {site.url.replace(/^https?:\/\//, "")}.</p>
+
+          <h2>Duomenų valdytojas</h2>
+          <p>
+            {site.owner}, vykdantis individualią veiklą (individualios veiklos pažymos Nr. {site.ivp}), toliau — „mes“.<br />
+            El. paštas: <a href={`mailto:${site.email}`}>{site.email}</a>, telefonas: <a href={site.phoneHref}>{site.phone}</a>.
+          </p>
 
           <h2>Kokius duomenis renkame</h2>
           <ul>

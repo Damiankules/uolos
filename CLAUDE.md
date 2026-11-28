@@ -32,7 +32,7 @@ Przed oddaniem pracy sprawdź, które punkty są zrobione, a które nie, i powie
 - [x] 1–5 Idea, technologie, architektura, UI/UX, programowanie (analiza konkurencji — nie robiona)
 - [x] 6 Technical SEO: sitemap, robots, canonical, meta, OG, JSON-LD (firma + FAQ), ALT, 301 /uolos.html, 404, llms.txt
 - [ ] 7 Bezpieczeństwo: brak nagłówków CSP/HSTS/Permissions-Policy; spam tylko honeypot (captcha FormSubmit wyłączona)
-- [ ] 8 Prawo: brak danych rejestrowych firmy w polityce prywatności; cookies — brak (dopóki nie ma analityki)
+- [x] 8 Prawo: właściciel Aleksandr Smirnov, IVP Nr. 984953 (polityka prywatności + stopka); cookies — brak, polityka cookies/zgody dopiero przy analityce
 - [ ] 9 Optymalizacja: brak AVIF, nie uruchomiony Lighthouse / audyt WCAG
 - [ ] 10 Testy: tylko Chromium (komputer + telefon); brak Safari/Firefox; formularz FormSubmit nieaktywowany
 - [x] 11 Wdrożenie: domena, DNS, SSL, Netlify; kopia kodu na GitHub

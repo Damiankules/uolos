@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="wrap mt-16 pt-8 border-t border-[var(--line-dark)] flex flex-wrap justify-between gap-4 text-cream/45">
-        <span>© {new Date().getFullYear()} {site.name} — dekoratyviniai uolų reljefai</span>
+        <span>© {new Date().getFullYear()} {site.name} · {site.owner}, ind. veiklos pažyma Nr. {site.ivp}</span>
         <Link href="/privatumo-politika/" className="hover:text-cream">Privatumo politika</Link>
       </div>
     </footer>
