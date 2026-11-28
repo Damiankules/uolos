@@ -16,6 +16,7 @@ export default function ProjectsPage() {
       <PageIntro eyebrow="Projektai" title={<>Kiekvienas projektas — <em>unikalus.</em></>} text="Kiekviena kompozicija gimsta iš individualios idėjos. Kuriame reljefus, kurie tampa išskirtine interjero architektūros dalimi." />
       <section className="pb-[clamp(88px,12vw,150px)]">
         <div className="wrap">
+          <h2 className="sr-only">Įgyvendinti projektai</h2>
           <div className="grid gap-14 md:grid-cols-2 md:gap-x-[clamp(28px,4vw,64px)]">
             {realProjects.map((p, i) => <ProjectCard key={p.slug} project={p} className={i % 2 ? "md:mt-[120px]" : ""} />)}
           </div>

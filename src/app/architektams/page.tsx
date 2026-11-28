@@ -2,6 +2,7 @@ import PageIntro from "@/components/sections/PageIntro";
 import Process from "@/components/sections/Process";
 import ContactForm from "@/components/ui/ContactForm";
 import { buildMetadata } from "@/lib/seo";
+import Picture from "@/components/ui/Picture";
 
 export const metadata = buildMetadata({
   title: "Architektams ir interjero dizaineriams",
@@ -22,7 +23,7 @@ export default function ArchitectsPage() {
       <section className="pb-[clamp(88px,12vw,150px)]">
         <div className="wrap grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:gap-24 lg:items-center">
           <div className="media aspect-[4/5] reveal">
-            <img src="/images/projects/miegamasis-lempos.webp" alt="Uolos reljefo ir šviesos sąveika interjere" loading="lazy" decoding="async" />
+            <Picture src="/images/projects/miegamasis-lempos.webp" alt="Uolos reljefo ir šviesos sąveika interjere" sizes="(min-width: 1024px) 45vw, 100vw" />
           </div>
           <div className="reveal">
             <p className="lead">Padedame įgyvendinti nestandartinius interjero sprendimus, kuriuose svarbus individualumas, natūralių formų estetika ir profesionalus atlikimas.</p>

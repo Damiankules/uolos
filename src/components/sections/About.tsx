@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Picture from "@/components/ui/Picture";
 
 /** "Tikrovė slypi detalėse" — texture mosaic with two looping videos and key facts. */
 export default function About() {
@@ -42,11 +43,11 @@ export default function About() {
             <p className="lead">Savo darbuose siekiame perteikti šį natūralų charakterį, ypatingą dėmesį skirdami reljefo gyliui, paviršiaus struktūrai ir spalvų dermėms.</p>
           </div>
         </div>
-        <div ref={mosaic} className="mosaic reveal">
+        <div ref={mosaic} className="mosaic reveal" role="region" aria-label="Reljefo detalės" tabIndex={0}>
           {tiles.map((t) => (
             <figure key={t.src} className={`tile ${"tall" in t && t.tall ? "tall" : ""}`}>
               {t.kind === "img" ? (
-                <img src={t.src} alt={t.label} loading="lazy" decoding="async" />
+                <Picture src={t.src.replace(/\.webp$/, ".webp")} alt={t.label} sizes="(min-width: 900px) 25vw, 68vw" />
               ) : (
                 <video src={t.src} poster={t.poster} muted loop playsInline preload="metadata" aria-label={t.label} />
               )}

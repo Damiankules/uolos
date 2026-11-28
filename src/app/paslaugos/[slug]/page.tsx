@@ -6,6 +6,7 @@ import ProjectCard from "@/components/ui/ProjectCard";
 import Button from "@/components/ui/Button";
 import CTA from "@/components/sections/CTA";
 import { buildMetadata } from "@/lib/seo";
+import Picture from "@/components/ui/Picture";
 
 type Params = Promise<{ slug: string }>;
 
@@ -46,7 +47,7 @@ export default async function ServicePage({ params }: { params: Params }) {
               </div>
             </div>
             <div className="media aspect-[4/5] reveal">
-              <img src={s.image.src} alt={s.image.alt} decoding="async" />
+              <Picture src={s.image.src} alt={s.image.alt} sizes="(min-width: 1024px) 45vw, 100vw" loading="eager" />
             </div>
           </div>
         </div>

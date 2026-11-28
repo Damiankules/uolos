@@ -57,7 +57,7 @@ export default function Lightbox({ photos, title, tag, index, onClose }: Props) 
             <p className="tag !text-clay">{tag} · {p.caption}</p>
             <h3 className="h3">
               {title}
-              {n > 1 && <span className="ml-3 font-sans text-[.74rem] tracking-[.2em] text-cream/50">{i + 1} / {n}</span>}
+              {n > 1 && <span className="ml-3 font-sans text-[.74rem] tracking-[.2em] text-cream/60">{i + 1} / {n}</span>}
             </h3>
           </div>
           <a href="/kontaktai/" className="btn btn-light">Aptarkime panašų projektą <span className="arr">→</span></a>

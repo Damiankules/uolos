@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { services } from "@/data/services";
+import Picture from "@/components/ui/Picture";
 
 export default function Services({ showHead = true }: { showHead?: boolean }) {
   return (
@@ -14,11 +15,12 @@ export default function Services({ showHead = true }: { showHead?: boolean }) {
             <p className="lead">Nuo akcentinės sienos iki individualios akmens kompozicijos — kiekvienas sprendimas pritaikomas konkrečiai erdvei.</p>
           </div>
         )}
+        {!showHead && <h2 className="sr-only">Paslaugų sąrašas</h2>}
         <div className="grid gap-12 md:grid-cols-3 md:gap-8">
           {services.map((s, i) => (
             <Link key={s.slug} href={`/paslaugos/${s.slug}/`} className="group reveal grid gap-5 content-start" style={{ transitionDelay: `${i * 100}ms` }}>
               <div className="media aspect-[4/3]">
-                <img src={s.image.src} alt={s.image.alt} loading="lazy" decoding="async" className="transition-transform duration-[1400ms] group-hover:scale-105" />
+                <Picture src={s.image.src} alt={s.image.alt} sizes="(min-width: 768px) 30vw, 100vw" className="transition-transform duration-[1400ms] group-hover:scale-105" />
               </div>
               <div>
                 <p className="tag">0{i + 1}</p>

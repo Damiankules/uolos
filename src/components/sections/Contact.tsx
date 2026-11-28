@@ -24,13 +24,13 @@ export default function Contact({ as: Heading = "h2" }: Props) {
             {items.map((it) => (
               <li key={it.label}>
                 <a href={it.href} {...(it.href.startsWith("http") ? { target: "_blank", rel: "noopener" } : {})} className="group block py-5 border-b border-[var(--line-dark)]">
-                  <small className="block text-[.68rem] tracking-[.24em] uppercase text-cream/50 mb-1.5">{it.label}</small>
+                  <small className="block text-[.68rem] tracking-[.24em] uppercase text-cream/60 mb-1.5">{it.label}</small>
                   <span className="inline-block font-serif text-[clamp(1.4rem,4.4vw,1.9rem)] transition-[transform,color] duration-500 group-hover:text-clay group-hover:translate-x-2 break-all">{it.value}</span>
                 </a>
               </li>
             ))}
           </ul>
-          <p className="mt-9 font-serif italic text-[1.25rem] text-clay">Kiekvienas projektas prasideda nuo idėjos.</p>
+          <p className="mt-9 font-serif italic text-[1.25rem] text-[#D19A76]">Kiekvienas projektas prasideda nuo idėjos.</p>
         </div>
         <div className="reveal"><ContactForm /></div>
       </div>

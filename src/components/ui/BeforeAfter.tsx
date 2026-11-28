@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Photo } from "@/types";
+import Picture from "@/components/ui/Picture";
 
 export interface BeforeAfterPair {
   label: string;
@@ -57,9 +58,9 @@ export default function BeforeAfter({ pairs }: { pairs: BeforeAfterPair[] }) {
         </div>
       )}
       <div ref={box} className={`ba ${swapping ? "swapping" : ""}`} style={{ ["--pos" as string]: `${pos}%` }}>
-        <img src={pair.before.src} alt={pair.before.alt} loading="lazy" decoding="async" style={{ objectPosition: pair.before.position }} />
+        <Picture src={pair.before.src} alt={pair.before.alt} sizes="(min-width: 1024px) 560px, 100vw" style={{ objectPosition: pair.before.position }} />
         <div className="ba-after">
-          <img src={pair.after.src} alt={pair.after.alt} loading="lazy" decoding="async" style={{ objectPosition: pair.after.position }} />
+          <Picture src={pair.after.src} alt={pair.after.alt} sizes="(min-width: 1024px) 560px, 100vw" style={{ objectPosition: pair.after.position }} />
         </div>
         <div className="ba-line"><div className="ba-knob" aria-hidden="true">‹ ›</div></div>
         <span className="ba-label l">Prieš</span>

@@ -31,10 +31,10 @@ Przed oddaniem pracy sprawdź, które punkty są zrobione, a które nie, i powie
 
 - [x] 1–5 Idea, technologie, architektura, UI/UX, programowanie (analiza konkurencji — nie robiona)
 - [x] 6 Technical SEO: sitemap, robots, canonical, meta, OG, JSON-LD (firma + FAQ), ALT, 301 /uolos.html, 404, llms.txt
-- [ ] 7 Bezpieczeństwo: brak nagłówków CSP/HSTS/Permissions-Policy; spam tylko honeypot (captcha FormSubmit wyłączona)
+- [x] 7 Bezpieczeństwo: HTTPS, nagłówki CSP/HSTS/Permissions-Policy/X-Frame w netlify.toml, walidacja formularza, honeypot (captcha FormSubmit wyłączona; rate limiting po stronie FormSubmit), brak sekretów w repo
 - [x] 8 Prawo: właściciel Aleksandr Smirnov, IVP Nr. 984953 (polityka prywatności + stopka); cookies — brak, polityka cookies/zgody dopiero przy analityce
-- [ ] 9 Optymalizacja: brak AVIF, nie uruchomiony Lighthouse / audyt WCAG
-- [ ] 10 Testy: tylko Chromium (komputer + telefon); brak Safari/Firefox; formularz FormSubmit nieaktywowany
+- [x] 9 Optymalizacja: AVIF+WebP w 480/640/960 (`<Picture>`, `npm run images`), lazy loading, cache w netlify.toml; Lighthouse mobile ~83–100 perf, 100 a11y/BP/SEO, desktop 99; axe WCAG 2.1 AA bez błędów. Do poprawy: LCP mobile ~4 s (symulacja)
+- [ ] 10 Testy: Chromium komputer+telefon OK (15 stron, CSP, formularz); brak testu Safari/Firefox (nie ma ich w środowisku); formularz FormSubmit nieaktywowany
 - [x] 11 Wdrożenie: domena, DNS, SSL, Netlify; kopia kodu na GitHub
 - [ ] 12 Analityka: nic (GSC, Bing, GA4/Clarity po zgodzie)
 - [ ] 13 Utrzymanie: brak monitoringu

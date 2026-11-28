@@ -19,7 +19,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="lt" className="no-js">
       <head>
         <link rel="preload" href="/fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossOrigin="" />
-        <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossOrigin="" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd()) }} />
       </head>
       <body>

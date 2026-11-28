@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Picture from "@/components/ui/Picture";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const slides = [
@@ -15,10 +16,14 @@ export default function Hero() {
   const [i, setI] = useState(0);
   const [cycle, setCycle] = useState(0);
   const [intro, setIntro] = useState(false);
+  // Slides 2–4 are added only after the page has loaded, so the first
+  // image (LCP) does not compete with them for bandwidth.
+  const [ready, setReady] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const touchX = useRef<number | null>(null);
 
   const go = useCallback((n: number) => {
+    setReady(true);
     setI((n + slides.length) % slides.length);
     setCycle((c) => c + 1);
   }, []);
@@ -30,6 +35,14 @@ export default function Hero() {
   }, [i, cycle, go]);
 
   useEffect(() => { const t = setTimeout(() => setIntro(true), 120); return () => clearTimeout(t); }, []);
+
+  useEffect(() => {
+    let t: ReturnType<typeof setTimeout>;
+    const later = () => { t = setTimeout(() => setReady(true), 1200); };
+    if (document.readyState === "complete") later();
+    else addEventListener("load", later, { once: true });
+    return () => { clearTimeout(t); removeEventListener("load", later); };
+  }, []);
 
   return (
     <section className="grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] lg:min-h-[calc(100svh-78px)] bg-cream" aria-label="Įvadas">
@@ -43,17 +56,20 @@ export default function Hero() {
           if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
         }}
       >
-        {slides.map((s, k) => (
-          <img
-            key={s.src}
-            src={s.src}
-            alt={s.alt}
-            className={k === i ? "on" : ""}
-            fetchPriority={k === 0 ? "high" : undefined}
-            loading={k === 0 ? "eager" : "lazy"}
-            style={{ objectPosition: s.pos, ["--fx" as string]: s.fx, ["--fy" as string]: s.fy }}
-          />
-        ))}
+        {slides.map((s, k) =>
+          k === 0 || ready ? (
+            <Picture
+              key={s.src}
+              src={s.src}
+              alt={s.alt}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className={k === i ? "on" : ""}
+              fetchPriority={k === 0 ? "high" : undefined}
+              loading="eager"
+              style={{ objectPosition: s.pos, ["--fx" as string]: s.fx, ["--fy" as string]: s.fy }}
+            />
+          ) : null
+        )}
         <span className="hero-tag" key={`t${i}`}>{slides[i].tag}</span>
         <div className="hero-dots" aria-label="Nuotraukos">
           {slides.map((s, k) => (

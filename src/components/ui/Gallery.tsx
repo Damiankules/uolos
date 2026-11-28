@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { Photo } from "@/types";
 import Lightbox from "./Lightbox";
+import Picture from "@/components/ui/Picture";
 
 interface Props {
   photos: Photo[];
@@ -24,7 +25,7 @@ export default function Gallery({ photos, title, tag }: Props) {
             className={`media reveal group cursor-zoom-in text-left ${i === 0 && photos.length > 2 ? "md:col-span-2 aspect-[16/11]" : "aspect-[4/5]"}`}
             aria-label={`Atidaryti nuotrauką: ${p.caption}`}
           >
-            <img src={p.src} alt={p.alt} loading={i === 0 ? "eager" : "lazy"} decoding="async" className="transition-transform duration-[1400ms] group-hover:scale-[1.04]" style={{ objectPosition: p.position }} />
+            <Picture src={p.src} alt={p.alt} loading={i === 0 ? "eager" : "lazy"} sizes={i === 0 && photos.length > 2 ? "(min-width: 768px) 90vw, 100vw" : "(min-width: 768px) 45vw, 100vw"} className="transition-transform duration-[1400ms] group-hover:scale-[1.04]" style={{ objectPosition: p.position }} />
             <span className="absolute left-4 bottom-4 z-[1] text-[.66rem] tracking-[.22em] uppercase text-cream bg-ink/55 px-3 py-2 rounded-full">{p.caption}</span>
           </button>
         ))}

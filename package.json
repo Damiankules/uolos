@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "npx serve out",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "images": "python3 scripts/optimize-images.py"
   },
   "dependencies": {
     "next": "16.4.6",

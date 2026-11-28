@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Project } from "@/types";
+import Picture from "@/components/ui/Picture";
 
 interface Props {
   project: Project;
@@ -14,9 +15,9 @@ export default function ProjectCard({ project: p, compact = false, className = "
   return (
     <Link href={`/projektai/${p.slug}/`} className={`pcard reveal group ${compact ? "compact" : ""} ${className}`}>
       <div className="media">
-        <img src={p.cover.src} alt={p.cover.alt} loading="lazy" decoding="async" style={{ objectPosition: p.cover.position }} />
+        <Picture src={p.cover.src} alt={p.cover.alt} sizes="(min-width: 768px) 45vw, 100vw" style={{ objectPosition: p.cover.position }} />
         {p.hoverCover && (
-          <img className="alt" src={p.hoverCover.src} alt="" loading="lazy" decoding="async" style={{ objectPosition: p.hoverCover.position }} />
+          <Picture className="alt" src={p.hoverCover.src} alt="" sizes="(min-width: 768px) 45vw, 100vw" style={{ objectPosition: p.hoverCover.position }} />
         )}
         <span className={`chip ${real ? "" : "viz"}`}>{real ? "Įgyvendintas projektas" : "Vizualizacija"}</span>
         {p.gallery.length > 1 && (

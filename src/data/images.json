@@ -1,0 +1,153 @@
+{
+ "/images/projects/miegamasis-lempos.webp": {
+  "w": 720,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/projects/miegamasis-po.webp": {
+  "w": 720,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/projects/miegamasis-pries.webp": {
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/projects/miegamasis-viz.webp": {
+  "w": 1168,
+  "h": 1280,
+  "widths": [
+   480,
+   640,
+   960
+  ]
+ },
+ "/images/projects/zidinys-po.webp": {
+  "w": 720,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/projects/zidinys-pries.webp": {
+  "w": 720,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/projects/zidinys-viz.webp": {
+  "w": 853,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/services/kompozicijos.webp": {
+  "w": 1200,
+  "h": 900,
+  "widths": [
+   480,
+   640,
+   960
+  ]
+ },
+ "/images/services/sienos.webp": {
+  "w": 1200,
+  "h": 900,
+  "widths": [
+   480,
+   640,
+   960
+  ]
+ },
+ "/images/services/zidiniai.webp": {
+  "w": 1200,
+  "h": 900,
+  "widths": [
+   480,
+   640,
+   960
+  ]
+ },
+ "/images/hero/akmeniskumas.webp": {
+  "w": 720,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/hero/miegamasis-lempos.webp": {
+  "w": 720,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/hero/miegamasis-viz.webp": {
+  "w": 1168,
+  "h": 1280,
+  "widths": [
+   480,
+   640,
+   960
+  ]
+ },
+ "/images/hero/zidinys-viz.webp": {
+  "w": 853,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/textures/akmeniskumas.webp": {
+  "w": 720,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/textures/detale-sviesi.webp": {
+  "w": 720,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/textures/detale-tamsi.webp": {
+  "w": 720,
+  "h": 1280,
+  "widths": [
+   480,
+   640
+  ]
+ },
+ "/images/textures/hero.webp": {
+  "w": 464,
+  "h": 848,
+  "widths": []
+ },
+ "/images/textures/sviesa.webp": {
+  "w": 464,
+  "h": 848,
+  "widths": []
+ }
+}

@@ -21,6 +21,8 @@ npm run typecheck
 | Pytania (DUK) | `src/data/faq.ts` |
 | Zdjęcia | `public/images/{hero,projects,services,textures}/` |
 
+Nowe zdjęcia: zapisz jako `.webp` w `public/images/...`, potem `npm run images` — powstaną wersje AVIF i mniejsze rozmiary (480/640/960 px), a `<Picture>` sam je wybierze.
+
 Nowy projekt = nowy obiekt w `projects.ts` + zdjęcia w `public/images/projects/`. Strona `/projektai/<slug>/` powstaje automatycznie.
 Wizualizacje mają `kind: "vizualizacija"` i są wyraźnie oddzielone od zrealizowanych projektów.
 
@@ -43,3 +45,8 @@ Zmienna `NEXT_PUBLIC_SITE_URL` (domyślnie `https://uolos.lt`) — patrz `.env.e
 Netlify (darmowy plan, prywatne repo) buduje tylko commity od członków zespołu Netlify.
 Commity muszą być podpisane kontem GitHub **Damiankules** — inaczej deploy kończy się błędem
 „Unrecognized Git contributor”.
+
+## Bezpieczeństwo
+
+Nagłówki (CSP, HSTS, Permissions-Policy, X-Frame-Options…) są w `netlify.toml`.
+CSP pozwala wysyłać formularz tylko do `formsubmit.co`. Nowy zewnętrzny skrypt (np. analityka) trzeba dopisać do CSP.

@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <Link href="/" className="brand !text-cream mb-5">
             <img src="/logo.svg" alt="" width={28} height={30} className="w-[28px] h-auto invert brightness-150" />
-            <span>uolos<span className="!text-cream/45">.lt</span></span>
+            <span>uolos<span className="!text-cream/60">.lt</span></span>
           </Link>
           <p className="text-cream/55 max-w-[34ch]">Individualūs dekoratyviniai uolų reljefai ir akmens kompozicijos, kuriamos rankomis.</p>
         </div>
@@ -34,7 +34,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="wrap mt-16 pt-8 border-t border-[var(--line-dark)] flex flex-wrap justify-between gap-4 text-cream/45">
+      <div className="wrap mt-16 pt-8 border-t border-[var(--line-dark)] flex flex-wrap justify-between gap-4 text-cream/65">
         <span>© {new Date().getFullYear()} {site.name} · {site.owner}, ind. veiklos pažyma Nr. {site.ivp}</span>
         <Link href="/privatumo-politika/" className="hover:text-cream">Privatumo politika</Link>
       </div>

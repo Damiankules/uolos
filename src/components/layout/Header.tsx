@@ -69,10 +69,12 @@ export default function Header() {
           <a href={site.instagram} target="_blank" rel="noopener">Instagram {site.instagramHandle}</a>
         </div>
       </div>
+      <aside aria-label="Greitas skambutis">
       <a href={site.phoneHref} className={`fab ${fab ? "show" : ""}`} aria-label="Skambinti">
         <svg viewBox="0 0 24 24" className="w-[17px] h-[17px] fill-none stroke-current" strokeWidth={1.6} aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></svg>
         Skambinti
       </a>
+      </aside>
     </>
   );
 }

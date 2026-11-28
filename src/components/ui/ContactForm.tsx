@@ -103,7 +103,7 @@ export default function ContactForm({ topic = "Privatus projektas" }: { topic?: 
           <svg viewBox="0 0 24 24" className="w-[22px] h-[22px] flex-none stroke-clay fill-none" strokeWidth={1.5} aria-hidden="true"><path d="M21 12.5 12.6 21a5.5 5.5 0 0 1-7.8-7.8l8.5-8.5a3.7 3.7 0 0 1 5.2 5.2l-8.5 8.5a1.8 1.8 0 0 1-2.6-2.6L15 8.2" /></svg>
           <span>
             <b className="block font-medium text-[.92rem] break-all">{fileName || "Pridėti interjero nuotrauką arba projektą"}</b>
-            <small className="text-cream/50 text-[.8rem]">JPG, PNG arba PDF, iki {MAX_FILE_MB} MB</small>
+            <small className="text-cream/60 text-[.8rem]">JPG, PNG arba PDF, iki {MAX_FILE_MB} MB</small>
           </span>
         </label>
         {errors.file && <span className="err">{errors.file}</span>}
@@ -111,7 +111,7 @@ export default function ContactForm({ topic = "Privatus projektas" }: { topic?: 
       <button type="submit" className="btn btn-light justify-self-start" disabled={sending}>
         {sending ? "Siunčiama…" : <>Siųsti užklausą <span className="arr">→</span></>}
       </button>
-      <p className="text-[.8rem] text-cream/45">
+      <p className="text-[.8rem] text-cream/60">
         Siųsdami sutinkate, kad jūsų duomenys būtų naudojami atsakyti į užklausą. <a href="/privatumo-politika/" className="underline">Privatumo politika</a>
       </p>
     </form>
